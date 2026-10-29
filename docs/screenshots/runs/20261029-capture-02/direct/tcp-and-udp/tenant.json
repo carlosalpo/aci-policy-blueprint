@@ -1,0 +1,363 @@
+{
+  "fvTenant": {
+    "attributes": {
+      "dn": "uni/tn-BlueprintDemo",
+      "name": "BlueprintDemo"
+    },
+    "children": [
+      {
+        "fvCtx": {
+          "attributes": {
+            "name": "Production",
+            "pcEnfPref": "enforced"
+          }
+        }
+      },
+      {
+        "fvBD": {
+          "attributes": {
+            "arpFlood": "yes",
+            "name": "AppBD",
+            "unicastRoute": "yes",
+            "unkMacUcastAct": "proxy"
+          },
+          "children": [
+            {
+              "fvRsCtx": {
+                "attributes": {
+                  "tnFvCtxName": "Production"
+                }
+              }
+            },
+            {
+              "fvSubnet": {
+                "attributes": {
+                  "ip": "192.0.2.65/26",
+                  "scope": "private"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fvBD": {
+          "attributes": {
+            "arpFlood": "yes",
+            "name": "DatabaseBD",
+            "unicastRoute": "yes",
+            "unkMacUcastAct": "proxy"
+          },
+          "children": [
+            {
+              "fvRsCtx": {
+                "attributes": {
+                  "tnFvCtxName": "Production"
+                }
+              }
+            },
+            {
+              "fvSubnet": {
+                "attributes": {
+                  "ip": "192.0.2.129/26",
+                  "scope": "private"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fvBD": {
+          "attributes": {
+            "arpFlood": "yes",
+            "name": "WebBD",
+            "unicastRoute": "yes",
+            "unkMacUcastAct": "proxy"
+          },
+          "children": [
+            {
+              "fvRsCtx": {
+                "attributes": {
+                  "tnFvCtxName": "Production"
+                }
+              }
+            },
+            {
+              "fvSubnet": {
+                "attributes": {
+                  "ip": "192.0.2.1/26",
+                  "scope": "private"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "vzFilter": {
+          "attributes": {
+            "name": "flt_app_dns"
+          },
+          "children": [
+            {
+              "vzEntry": {
+                "attributes": {
+                  "applyToFrag": "no",
+                  "dFromPort": "53",
+                  "dToPort": "53",
+                  "etherT": "ip",
+                  "name": "entry_01",
+                  "prot": "udp",
+                  "sFromPort": "unspecified",
+                  "sToPort": "unspecified",
+                  "stateful": "no",
+                  "tcpRules": "unspecified"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "vzBrCP": {
+          "attributes": {
+            "name": "ct_app_dns",
+            "scope": "context"
+          },
+          "children": [
+            {
+              "vzSubj": {
+                "attributes": {
+                  "name": "traffic",
+                  "revFltPorts": "yes"
+                },
+                "children": [
+                  {
+                    "vzRsSubjFiltAtt": {
+                      "attributes": {
+                        "action": "permit",
+                        "tnVzFilterName": "flt_app_dns"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "vzFilter": {
+          "attributes": {
+            "name": "flt_app_to_database"
+          },
+          "children": [
+            {
+              "vzEntry": {
+                "attributes": {
+                  "applyToFrag": "no",
+                  "dFromPort": "5432",
+                  "dToPort": "5432",
+                  "etherT": "ip",
+                  "name": "entry_01",
+                  "prot": "tcp",
+                  "sFromPort": "unspecified",
+                  "sToPort": "unspecified",
+                  "stateful": "no",
+                  "tcpRules": "unspecified"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "vzBrCP": {
+          "attributes": {
+            "name": "ct_app_to_database",
+            "scope": "context"
+          },
+          "children": [
+            {
+              "vzSubj": {
+                "attributes": {
+                  "name": "traffic",
+                  "revFltPorts": "yes"
+                },
+                "children": [
+                  {
+                    "vzRsSubjFiltAtt": {
+                      "attributes": {
+                        "action": "permit",
+                        "tnVzFilterName": "flt_app_to_database"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "vzFilter": {
+          "attributes": {
+            "name": "flt_web_to_app"
+          },
+          "children": [
+            {
+              "vzEntry": {
+                "attributes": {
+                  "applyToFrag": "no",
+                  "dFromPort": "8443",
+                  "dToPort": "8443",
+                  "etherT": "ip",
+                  "name": "entry_01",
+                  "prot": "tcp",
+                  "sFromPort": "unspecified",
+                  "sToPort": "unspecified",
+                  "stateful": "no",
+                  "tcpRules": "unspecified"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "vzBrCP": {
+          "attributes": {
+            "name": "ct_web_to_app",
+            "scope": "context"
+          },
+          "children": [
+            {
+              "vzSubj": {
+                "attributes": {
+                  "name": "traffic",
+                  "revFltPorts": "yes"
+                },
+                "children": [
+                  {
+                    "vzRsSubjFiltAtt": {
+                      "attributes": {
+                        "action": "permit",
+                        "tnVzFilterName": "flt_web_to_app"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fvAp": {
+          "attributes": {
+            "name": "Store"
+          },
+          "children": [
+            {
+              "fvAEPg": {
+                "attributes": {
+                  "name": "App",
+                  "pcEnfPref": "unenforced",
+                  "prefGrMemb": "exclude"
+                },
+                "children": [
+                  {
+                    "fvRsBd": {
+                      "attributes": {
+                        "tnFvBDName": "AppBD"
+                      }
+                    }
+                  },
+                  {
+                    "fvRsCons": {
+                      "attributes": {
+                        "tnVzBrCPName": "ct_app_dns"
+                      }
+                    }
+                  },
+                  {
+                    "fvRsCons": {
+                      "attributes": {
+                        "tnVzBrCPName": "ct_app_to_database"
+                      }
+                    }
+                  },
+                  {
+                    "fvRsProv": {
+                      "attributes": {
+                        "tnVzBrCPName": "ct_web_to_app"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "fvAEPg": {
+                "attributes": {
+                  "name": "Database",
+                  "pcEnfPref": "unenforced",
+                  "prefGrMemb": "exclude"
+                },
+                "children": [
+                  {
+                    "fvRsBd": {
+                      "attributes": {
+                        "tnFvBDName": "DatabaseBD"
+                      }
+                    }
+                  },
+                  {
+                    "fvRsProv": {
+                      "attributes": {
+                        "tnVzBrCPName": "ct_app_dns"
+                      }
+                    }
+                  },
+                  {
+                    "fvRsProv": {
+                      "attributes": {
+                        "tnVzBrCPName": "ct_app_to_database"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "fvAEPg": {
+                "attributes": {
+                  "name": "Web",
+                  "pcEnfPref": "unenforced",
+                  "prefGrMemb": "exclude"
+                },
+                "children": [
+                  {
+                    "fvRsBd": {
+                      "attributes": {
+                        "tnFvBDName": "WebBD"
+                      }
+                    }
+                  },
+                  {
+                    "fvRsCons": {
+                      "attributes": {
+                        "tnVzBrCPName": "ct_web_to_app"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

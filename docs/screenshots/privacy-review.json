@@ -1,0 +1,16 @@
+{
+  "result": "passed",
+  "personal_absolute_paths": false,
+  "rfc1918_addresses": false,
+  "credentials_or_client_data_observed": false,
+  "images_visually_reviewed": 5,
+  "public_text_scan_issues": [],
+  "observed_ipv4_literals": [
+    "192.0.2.0",
+    "192.0.2.1",
+    "192.0.2.129",
+    "192.0.2.2",
+    "192.0.2.65"
+  ],
+  "notes": "Only demonstration inputs, local output and code sources are included. Documentation address range 192.0.2.0/24 is intentional. Failed attempts and temporary test data excluded."
+}

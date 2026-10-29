@@ -98,6 +98,12 @@ Tests inspect the generated graph and all relation targets, verify one pair per 
 
 Read the [validation record](docs/validation.md), [design and Cisco references](docs/design.md), [input specification](docs/input-spec.md) and [security notes](SECURITY.md).
 
+## Test captures
+
+![Executed three-tier example and its communication matrix](docs/screenshots/images/01-three-tier-matrix.jpg)
+
+[Five documented captures](docs/screenshots/README.md) show the generated matrix, rejected designs, 94 passing tests and artifact-hash verification. These are local result reports backed by retained command output; they are not APIC or fabric screenshots.
+
 ## En español
 
 Herramienta de diseño para traducir requisitos de comunicación en políticas ACI revisables. Ayuda a detectar inconsistencias antes de preparar un cambio y mantiene alineados el archivo de políticas, la matriz de comunicaciones y la documentación. Esta versión se prueba localmente y en CI; no se presenta como una implementación validada en APIC.

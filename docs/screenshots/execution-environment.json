@@ -1,0 +1,11 @@
+{
+  "date_timezone": "America/Tegucigalpa",
+  "version": "0.1.0",
+  "commit": "dfcb727d2de41ca9ee4a362613a3836c67d3a445",
+  "python": "Python 3.12.14",
+  "path_prepend": "<repo>/.venv/bin",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "PYTEST_ADDOPTS": "-p no:cacheprovider --basetemp=<evidence>/runs/20261029-capture-02/pytest-tmp",
+  "RUFF_NO_CACHE": "true",
+  "repo_status_after": ""
+}

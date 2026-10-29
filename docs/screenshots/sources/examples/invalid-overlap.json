@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "tenant": "BlueprintDemo",
+  "vrfs": [
+    {
+      "name": "Production"
+    }
+  ],
+  "bridge_domains": [
+    {
+      "name": "WebBD",
+      "vrf": "Production",
+      "gateway": "192.0.2.1/26"
+    },
+    {
+      "name": "AppBD",
+      "vrf": "Production",
+      "gateway": "192.0.2.2/26"
+    },
+    {
+      "name": "DatabaseBD",
+      "vrf": "Production",
+      "gateway": "192.0.2.129/26"
+    }
+  ],
+  "applications": [
+    {
+      "name": "Store",
+      "epgs": [
+        {
+          "name": "Web",
+          "bridge_domain": "WebBD"
+        },
+        {
+          "name": "App",
+          "bridge_domain": "AppBD"
+        },
+        {
+          "name": "Database",
+          "bridge_domain": "DatabaseBD"
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "id": "web_to_app",
+      "consumer": "Store/Web",
+      "provider": "Store/App",
+      "protocol": "tcp",
+      "destination_ports": [
+        {
+          "from": 8443,
+          "to": 8443
+        }
+      ]
+    },
+    {
+      "id": "app_to_database",
+      "consumer": "Store/App",
+      "provider": "Store/Database",
+      "protocol": "tcp",
+      "destination_ports": [
+        {
+          "from": 5432,
+          "to": 5432
+        }
+      ]
+    }
+  ]
+}

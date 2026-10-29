@@ -1,0 +1,13 @@
+{
+  "findings": [
+    {
+      "code": "SUBNET_OVERLAP",
+      "location": "bridge_domains/WebBD",
+      "message": "Subnet overlaps bridge domain AppBD in the VRF.",
+      "severity": "error"
+    }
+  ],
+  "schema_version": 1,
+  "valid": false,
+  "validation_scope": "offline-model-only"
+}

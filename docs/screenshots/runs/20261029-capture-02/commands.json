@@ -1,0 +1,65 @@
+[
+  {
+    "id": "pytest",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "cwd": "../../../projects/aci-policy-blueprint",
+    "started_at": "2026-10-29T18:59:33.058378+00:00",
+    "finished_at": "2026-10-29T18:59:33.327338+00:00",
+    "exit_code": 0,
+    "stdout": "runs/20261029-capture-02/pytest.stdout.txt",
+    "stderr": "runs/20261029-capture-02/pytest.stderr.txt"
+  },
+  {
+    "id": "lint",
+    "command": [
+      ".venv/bin/ruff",
+      "check",
+      "src",
+      "tests",
+      "scripts"
+    ],
+    "cwd": "../../../projects/aci-policy-blueprint",
+    "started_at": "2026-10-29T18:59:33.327358+00:00",
+    "finished_at": "2026-10-29T18:59:33.378824+00:00",
+    "exit_code": 0,
+    "stdout": "runs/20261029-capture-02/lint.stdout.txt",
+    "stderr": "runs/20261029-capture-02/lint.stderr.txt"
+  },
+  {
+    "id": "format",
+    "command": [
+      ".venv/bin/ruff",
+      "format",
+      "--check",
+      "src",
+      "tests",
+      "scripts"
+    ],
+    "cwd": "../../../projects/aci-policy-blueprint",
+    "started_at": "2026-10-29T18:59:33.378838+00:00",
+    "finished_at": "2026-10-29T18:59:33.407138+00:00",
+    "exit_code": 0,
+    "stdout": "runs/20261029-capture-02/format.stdout.txt",
+    "stderr": "runs/20261029-capture-02/format.stderr.txt"
+  },
+  {
+    "id": "examples",
+    "command": [
+      ".venv/bin/python",
+      "scripts/check_examples.py",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/examples"
+    ],
+    "cwd": "../../../projects/aci-policy-blueprint",
+    "started_at": "2026-10-29T18:59:33.407153+00:00",
+    "finished_at": "2026-10-29T18:59:33.886946+00:00",
+    "exit_code": 0,
+    "stdout": "runs/20261029-capture-02/examples.stdout.txt",
+    "stderr": "runs/20261029-capture-02/examples.stderr.txt"
+  }
+]

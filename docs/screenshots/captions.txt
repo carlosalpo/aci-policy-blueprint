@@ -1,0 +1,14 @@
+images/01-three-tier-matrix.jpg
+Diseño de tres capas y matriz de comunicaciones con reglas inversas explícitas. Compilación offline; no prueba conectividad en fabric.
+
+images/02-invalid-cross-vrf.jpg
+CROSS_VRF rechaza el flujo entre VRF con código 1. La salida contiene hallazgos y manifiesto, sin tenant.json ni payload APIC.
+
+images/03-invalid-overlap.jpg
+SUBNET_OVERLAP detecta subredes superpuestas dentro de una VRF. El modelo se rechaza con código 1 y no genera payload APIC.
+
+images/04-tests-and-examples.jpg
+Ejecución local: 94 pruebas aprobadas, siete ejemplos CLI verificados y controles de lint y formato correctos. Alcance offline del modelo.
+
+images/05-artifact-hashes.jpg
+Cinco artefactos del diseño three-tier verificados por SHA256. El manifiesto declara offline-model-only y apic_tested: false.

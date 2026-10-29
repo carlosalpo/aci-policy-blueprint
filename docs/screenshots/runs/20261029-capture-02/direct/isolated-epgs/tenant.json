@@ -1,0 +1,162 @@
+{
+  "fvTenant": {
+    "attributes": {
+      "dn": "uni/tn-BlueprintDemo",
+      "name": "BlueprintDemo"
+    },
+    "children": [
+      {
+        "fvCtx": {
+          "attributes": {
+            "name": "Production",
+            "pcEnfPref": "enforced"
+          }
+        }
+      },
+      {
+        "fvBD": {
+          "attributes": {
+            "arpFlood": "yes",
+            "name": "AppBD",
+            "unicastRoute": "yes",
+            "unkMacUcastAct": "proxy"
+          },
+          "children": [
+            {
+              "fvRsCtx": {
+                "attributes": {
+                  "tnFvCtxName": "Production"
+                }
+              }
+            },
+            {
+              "fvSubnet": {
+                "attributes": {
+                  "ip": "192.0.2.65/26",
+                  "scope": "private"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fvBD": {
+          "attributes": {
+            "arpFlood": "yes",
+            "name": "DatabaseBD",
+            "unicastRoute": "yes",
+            "unkMacUcastAct": "proxy"
+          },
+          "children": [
+            {
+              "fvRsCtx": {
+                "attributes": {
+                  "tnFvCtxName": "Production"
+                }
+              }
+            },
+            {
+              "fvSubnet": {
+                "attributes": {
+                  "ip": "192.0.2.129/26",
+                  "scope": "private"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fvBD": {
+          "attributes": {
+            "arpFlood": "yes",
+            "name": "WebBD",
+            "unicastRoute": "yes",
+            "unkMacUcastAct": "proxy"
+          },
+          "children": [
+            {
+              "fvRsCtx": {
+                "attributes": {
+                  "tnFvCtxName": "Production"
+                }
+              }
+            },
+            {
+              "fvSubnet": {
+                "attributes": {
+                  "ip": "192.0.2.1/26",
+                  "scope": "private"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fvAp": {
+          "attributes": {
+            "name": "Store"
+          },
+          "children": [
+            {
+              "fvAEPg": {
+                "attributes": {
+                  "name": "App",
+                  "pcEnfPref": "unenforced",
+                  "prefGrMemb": "exclude"
+                },
+                "children": [
+                  {
+                    "fvRsBd": {
+                      "attributes": {
+                        "tnFvBDName": "AppBD"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "fvAEPg": {
+                "attributes": {
+                  "name": "Database",
+                  "pcEnfPref": "unenforced",
+                  "prefGrMemb": "exclude"
+                },
+                "children": [
+                  {
+                    "fvRsBd": {
+                      "attributes": {
+                        "tnFvBDName": "DatabaseBD"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "fvAEPg": {
+                "attributes": {
+                  "name": "Web",
+                  "pcEnfPref": "unenforced",
+                  "prefGrMemb": "exclude"
+                },
+                "children": [
+                  {
+                    "fvRsBd": {
+                      "attributes": {
+                        "tnFvBDName": "WebBD"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

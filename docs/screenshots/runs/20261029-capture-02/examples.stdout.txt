@@ -1,0 +1,7 @@
+PASS three-tier: exit 0; artifact hashes verified
+PASS tcp-and-udp: exit 0; artifact hashes verified
+PASS isolated-epgs: exit 0; artifact hashes verified
+PASS invalid-cross-vrf: exit 1; artifact hashes verified
+PASS invalid-overlap: exit 1; artifact hashes verified
+PASS invalid-reference: exit 1; artifact hashes verified
+PASS invalid-broad-ports: exit 1; artifact hashes verified

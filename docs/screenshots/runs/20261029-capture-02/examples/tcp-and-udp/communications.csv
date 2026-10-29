@@ -1,0 +1,7 @@
+flow,contract,direction,source,destination,protocol,source_ports,destination_ports,stateful
+app_dns,ct_app_dns,consumer-to-provider,Store/App,Store/Database,udp,any,53,no
+app_dns,ct_app_dns,provider-to-consumer,Store/Database,Store/App,udp,53,any,no
+app_to_database,ct_app_to_database,consumer-to-provider,Store/App,Store/Database,tcp,any,5432,no
+app_to_database,ct_app_to_database,provider-to-consumer,Store/Database,Store/App,tcp,5432,any,no
+web_to_app,ct_web_to_app,consumer-to-provider,Store/Web,Store/App,tcp,any,8443,no
+web_to_app,ct_web_to_app,provider-to-consumer,Store/App,Store/Web,tcp,8443,any,no

@@ -1,0 +1,13 @@
+{
+  "findings": [
+    {
+      "code": "UNKNOWN_EPG",
+      "location": "flows/web_to_app",
+      "message": "Consumer or provider does not exist.",
+      "severity": "error"
+    }
+  ],
+  "schema_version": 1,
+  "valid": false,
+  "validation_scope": "offline-model-only"
+}

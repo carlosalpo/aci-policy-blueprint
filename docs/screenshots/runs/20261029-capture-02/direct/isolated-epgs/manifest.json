@@ -1,0 +1,27 @@
+{
+  "apic_tested": false,
+  "canonical_intent_sha256": "1fc7c1dcfc2e4323112b35d093d0f2714e1cde94b5bb5117a73bf7ec28fbaf0d",
+  "files": {
+    "communications.csv": "81a5e477f96325812689e22de81a323439ccec8afaa03c4f362db818c5db6619",
+    "intent.json": "1fc7c1dcfc2e4323112b35d093d0f2714e1cde94b5bb5117a73bf7ec28fbaf0d",
+    "review.md": "b8138a7cb636e6032035f4733365e5d8bbc994b59e9805571b6ab2f7253ad5c2",
+    "tenant.json": "b702f8c4ae12d9a29f64a6d4463afcc038570ca94c7d618d38336d92970c96f4",
+    "validation.json": "43072ef44ae805a2ff4b1606c5ec601fb904348bf54428f444e4b3c21cb4ca4e"
+  },
+  "input_sha256": "917f4c824e1f797ed0c1efb39d75d17240020a14c445c38b0d4224322d2529cd",
+  "object_counts": {
+    "fvAEPg": 3,
+    "fvAp": 1,
+    "fvBD": 3,
+    "fvCtx": 1,
+    "fvRsBd": 3,
+    "fvRsCtx": 3,
+    "fvSubnet": 3,
+    "fvTenant": 1
+  },
+  "result": "valid-model",
+  "schema_version": 1,
+  "tool": "aci-policy-blueprint",
+  "validation_scope": "offline-model-only",
+  "version": "0.1.0"
+}

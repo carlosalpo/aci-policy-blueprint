@@ -1,0 +1,86 @@
+[
+  {
+    "manifest": "runs/20261029-capture-02/direct/invalid-broad-ports/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/direct/invalid-cross-vrf/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/direct/invalid-overlap/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/direct/invalid-reference/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/direct/isolated-epgs/manifest.json",
+    "files_verified": 5,
+    "result": "valid-model",
+    "tenant_payload_exists": true
+  },
+  {
+    "manifest": "runs/20261029-capture-02/direct/tcp-and-udp/manifest.json",
+    "files_verified": 5,
+    "result": "valid-model",
+    "tenant_payload_exists": true
+  },
+  {
+    "manifest": "runs/20261029-capture-02/direct/three-tier/manifest.json",
+    "files_verified": 5,
+    "result": "valid-model",
+    "tenant_payload_exists": true
+  },
+  {
+    "manifest": "runs/20261029-capture-02/examples/invalid-broad-ports/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/examples/invalid-cross-vrf/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/examples/invalid-overlap/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/examples/invalid-reference/manifest.json",
+    "files_verified": 2,
+    "result": "invalid-model",
+    "tenant_payload_exists": false
+  },
+  {
+    "manifest": "runs/20261029-capture-02/examples/isolated-epgs/manifest.json",
+    "files_verified": 5,
+    "result": "valid-model",
+    "tenant_payload_exists": true
+  },
+  {
+    "manifest": "runs/20261029-capture-02/examples/tcp-and-udp/manifest.json",
+    "files_verified": 5,
+    "result": "valid-model",
+    "tenant_payload_exists": true
+  },
+  {
+    "manifest": "runs/20261029-capture-02/examples/three-tier/manifest.json",
+    "files_verified": 5,
+    "result": "valid-model",
+    "tenant_payload_exists": true
+  }
+]

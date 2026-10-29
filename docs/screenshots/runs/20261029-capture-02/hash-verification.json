@@ -1,0 +1,32 @@
+[
+  {
+    "file": "communications.csv",
+    "expected": "4e97c73943819158de141903a34a13fed554ec67c75fa475d44b1b27ecdca10c",
+    "actual": "4e97c73943819158de141903a34a13fed554ec67c75fa475d44b1b27ecdca10c",
+    "verified": true
+  },
+  {
+    "file": "intent.json",
+    "expected": "95b45ab4387d34625d9700954d0436549aa075861a4c2e615e3dff5ee73ae1a9",
+    "actual": "95b45ab4387d34625d9700954d0436549aa075861a4c2e615e3dff5ee73ae1a9",
+    "verified": true
+  },
+  {
+    "file": "review.md",
+    "expected": "eb1ca6264dc4777e4517f7f4f9fb70193a0c77a1b9b69afada73dfd12f5f9024",
+    "actual": "eb1ca6264dc4777e4517f7f4f9fb70193a0c77a1b9b69afada73dfd12f5f9024",
+    "verified": true
+  },
+  {
+    "file": "tenant.json",
+    "expected": "5b301990c41208a1ff7af18fbb8576ce4fb770c068a0a5ab49821c3f3425c6e6",
+    "actual": "5b301990c41208a1ff7af18fbb8576ce4fb770c068a0a5ab49821c3f3425c6e6",
+    "verified": true
+  },
+  {
+    "file": "validation.json",
+    "expected": "57bb6db558ba03f9151db2ef5e8b28328301e2721040594e4392ff40d86bf556",
+    "actual": "57bb6db558ba03f9151db2ef5e8b28328301e2721040594e4392ff40d86bf556",
+    "verified": true
+  }
+]

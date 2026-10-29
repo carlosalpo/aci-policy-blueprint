@@ -1,0 +1,15 @@
+{
+  "apic_tested": false,
+  "canonical_intent_sha256": "787225b0e61a12f0db00c89c5af08eeaac6a77df6d7ce892f3da193d0d10df0e",
+  "files": {
+    "review.md": "3123591b3a8c02b4091ee3011b1c32ff3d834bb61b8d7f67f75e23d4d3411dea",
+    "validation.json": "43af65af7b3d8923cbec6e38b3fdc027d58c20477c5a3ae1d7a5212e21f5dde6"
+  },
+  "input_sha256": "02c2d3b00e272826fc3aba69673333181865a456b84b957f20f5be233331936c",
+  "object_counts": {},
+  "result": "invalid-model",
+  "schema_version": 1,
+  "tool": "aci-policy-blueprint",
+  "validation_scope": "offline-model-only",
+  "version": "0.1.0"
+}

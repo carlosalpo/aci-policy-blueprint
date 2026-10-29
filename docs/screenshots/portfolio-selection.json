@@ -1,0 +1,12 @@
+[
+  {
+    "rank": 1,
+    "image": "images/01-three-tier-matrix.jpg",
+    "reason": "Muestra el resultado principal: matriz de tres capas con puertos y reglas inversas."
+  },
+  {
+    "rank": 2,
+    "image": "images/04-tests-and-examples.jpg",
+    "reason": "Aporta evidencia de verificación: 94 pruebas, siete ejemplos, lint y formato."
+  }
+]

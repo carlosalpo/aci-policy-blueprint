@@ -1,0 +1,37 @@
+[
+  {
+    "case": "three-tier",
+    "exit_code": 0,
+    "verified": true
+  },
+  {
+    "case": "tcp-and-udp",
+    "exit_code": 0,
+    "verified": true
+  },
+  {
+    "case": "isolated-epgs",
+    "exit_code": 0,
+    "verified": true
+  },
+  {
+    "case": "invalid-cross-vrf",
+    "exit_code": 1,
+    "verified": true
+  },
+  {
+    "case": "invalid-overlap",
+    "exit_code": 1,
+    "verified": true
+  },
+  {
+    "case": "invalid-reference",
+    "exit_code": 1,
+    "verified": true
+  },
+  {
+    "case": "invalid-broad-ports",
+    "exit_code": 1,
+    "verified": true
+  }
+]

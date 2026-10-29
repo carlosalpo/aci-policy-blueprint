@@ -1,0 +1,34 @@
+{
+  "apic_tested": false,
+  "canonical_intent_sha256": "95b45ab4387d34625d9700954d0436549aa075861a4c2e615e3dff5ee73ae1a9",
+  "files": {
+    "communications.csv": "4e97c73943819158de141903a34a13fed554ec67c75fa475d44b1b27ecdca10c",
+    "intent.json": "95b45ab4387d34625d9700954d0436549aa075861a4c2e615e3dff5ee73ae1a9",
+    "review.md": "eb1ca6264dc4777e4517f7f4f9fb70193a0c77a1b9b69afada73dfd12f5f9024",
+    "tenant.json": "5b301990c41208a1ff7af18fbb8576ce4fb770c068a0a5ab49821c3f3425c6e6",
+    "validation.json": "57bb6db558ba03f9151db2ef5e8b28328301e2721040594e4392ff40d86bf556"
+  },
+  "input_sha256": "474cf42426d754ebbef2d5b9f7cd024ad41270118a1b5f48ddead01225287522",
+  "object_counts": {
+    "fvAEPg": 3,
+    "fvAp": 1,
+    "fvBD": 3,
+    "fvCtx": 1,
+    "fvRsBd": 3,
+    "fvRsCons": 2,
+    "fvRsCtx": 3,
+    "fvRsProv": 2,
+    "fvSubnet": 3,
+    "fvTenant": 1,
+    "vzBrCP": 2,
+    "vzEntry": 2,
+    "vzFilter": 2,
+    "vzRsSubjFiltAtt": 2,
+    "vzSubj": 2
+  },
+  "result": "valid-model",
+  "schema_version": 1,
+  "tool": "aci-policy-blueprint",
+  "validation_scope": "offline-model-only",
+  "version": "0.1.0"
+}

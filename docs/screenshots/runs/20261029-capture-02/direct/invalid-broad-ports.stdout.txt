@@ -1,0 +1,1 @@
+INVALID MODEL | offline-model-only | 3 artifacts | no APIC connection

@@ -1,0 +1,46 @@
+{
+  "applications": [
+    {
+      "epgs": [
+        {
+          "bridge_domain": "AppBD",
+          "name": "App"
+        },
+        {
+          "bridge_domain": "DatabaseBD",
+          "name": "Database"
+        },
+        {
+          "bridge_domain": "WebBD",
+          "name": "Web"
+        }
+      ],
+      "name": "Store"
+    }
+  ],
+  "bridge_domains": [
+    {
+      "gateway": "192.0.2.65/26",
+      "name": "AppBD",
+      "vrf": "Production"
+    },
+    {
+      "gateway": "192.0.2.129/26",
+      "name": "DatabaseBD",
+      "vrf": "Production"
+    },
+    {
+      "gateway": "192.0.2.1/26",
+      "name": "WebBD",
+      "vrf": "Production"
+    }
+  ],
+  "flows": [],
+  "schema_version": 1,
+  "tenant": "BlueprintDemo",
+  "vrfs": [
+    {
+      "name": "Production"
+    }
+  ]
+}

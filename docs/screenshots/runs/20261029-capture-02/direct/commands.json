@@ -1,0 +1,114 @@
+[
+  {
+    "case": "three-tier",
+    "command": [
+      ".venv/bin/aci-blueprint",
+      "build",
+      "--input",
+      "examples/three-tier.json",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/direct/three-tier"
+    ],
+    "started_at": "2026-10-29T19:01:00.247931+00:00",
+    "finished_at": "2026-10-29T19:01:00.376530+00:00",
+    "exit_code": 0,
+    "stdout": "runs/20261029-capture-02/direct/three-tier.stdout.txt",
+    "stderr": "runs/20261029-capture-02/direct/three-tier.stderr.txt"
+  },
+  {
+    "case": "tcp-and-udp",
+    "command": [
+      ".venv/bin/aci-blueprint",
+      "build",
+      "--input",
+      "examples/tcp-and-udp.json",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/direct/tcp-and-udp"
+    ],
+    "started_at": "2026-10-29T19:01:00.376703+00:00",
+    "finished_at": "2026-10-29T19:01:00.430338+00:00",
+    "exit_code": 0,
+    "stdout": "runs/20261029-capture-02/direct/tcp-and-udp.stdout.txt",
+    "stderr": "runs/20261029-capture-02/direct/tcp-and-udp.stderr.txt"
+  },
+  {
+    "case": "isolated-epgs",
+    "command": [
+      ".venv/bin/aci-blueprint",
+      "build",
+      "--input",
+      "examples/isolated-epgs.json",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/direct/isolated-epgs"
+    ],
+    "started_at": "2026-10-29T19:01:00.430428+00:00",
+    "finished_at": "2026-10-29T19:01:00.486805+00:00",
+    "exit_code": 0,
+    "stdout": "runs/20261029-capture-02/direct/isolated-epgs.stdout.txt",
+    "stderr": "runs/20261029-capture-02/direct/isolated-epgs.stderr.txt"
+  },
+  {
+    "case": "invalid-cross-vrf",
+    "command": [
+      ".venv/bin/aci-blueprint",
+      "build",
+      "--input",
+      "examples/invalid-cross-vrf.json",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/direct/invalid-cross-vrf"
+    ],
+    "started_at": "2026-10-29T19:01:00.486856+00:00",
+    "finished_at": "2026-10-29T19:01:00.545607+00:00",
+    "exit_code": 1,
+    "stdout": "runs/20261029-capture-02/direct/invalid-cross-vrf.stdout.txt",
+    "stderr": "runs/20261029-capture-02/direct/invalid-cross-vrf.stderr.txt"
+  },
+  {
+    "case": "invalid-overlap",
+    "command": [
+      ".venv/bin/aci-blueprint",
+      "build",
+      "--input",
+      "examples/invalid-overlap.json",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/direct/invalid-overlap"
+    ],
+    "started_at": "2026-10-29T19:01:00.545659+00:00",
+    "finished_at": "2026-10-29T19:01:00.600119+00:00",
+    "exit_code": 1,
+    "stdout": "runs/20261029-capture-02/direct/invalid-overlap.stdout.txt",
+    "stderr": "runs/20261029-capture-02/direct/invalid-overlap.stderr.txt"
+  },
+  {
+    "case": "invalid-reference",
+    "command": [
+      ".venv/bin/aci-blueprint",
+      "build",
+      "--input",
+      "examples/invalid-reference.json",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/direct/invalid-reference"
+    ],
+    "started_at": "2026-10-29T19:01:00.600165+00:00",
+    "finished_at": "2026-10-29T19:01:00.652968+00:00",
+    "exit_code": 1,
+    "stdout": "runs/20261029-capture-02/direct/invalid-reference.stdout.txt",
+    "stderr": "runs/20261029-capture-02/direct/invalid-reference.stderr.txt"
+  },
+  {
+    "case": "invalid-broad-ports",
+    "command": [
+      ".venv/bin/aci-blueprint",
+      "build",
+      "--input",
+      "examples/invalid-broad-ports.json",
+      "--output",
+      "../../work/evidence-captures/aci-policy-blueprint/runs/20261029-capture-02/direct/invalid-broad-ports"
+    ],
+    "started_at": "2026-10-29T19:01:00.653012+00:00",
+    "finished_at": "2026-10-29T19:01:00.707398+00:00",
+    "exit_code": 1,
+    "stdout": "runs/20261029-capture-02/direct/invalid-broad-ports.stdout.txt",
+    "stderr": "runs/20261029-capture-02/direct/invalid-broad-ports.stderr.txt"
+  }
+]

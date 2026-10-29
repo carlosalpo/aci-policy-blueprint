@@ -1,0 +1,13 @@
+{
+  "findings": [
+    {
+      "code": "BROAD_PORT_RANGE",
+      "location": "flows/web_to_app",
+      "message": "Each port range is limited to 1,024 ports.",
+      "severity": "error"
+    }
+  ],
+  "schema_version": 1,
+  "valid": false,
+  "validation_scope": "offline-model-only"
+}

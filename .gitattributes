@@ -1,0 +1,2 @@
+# Keep captured evidence bytes intact, including original terminal line endings.
+docs/screenshots/** -text -whitespace

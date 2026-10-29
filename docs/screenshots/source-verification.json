@@ -1,0 +1,58 @@
+[
+  {
+    "path": "sources/examples/invalid-broad-ports.json",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/examples/invalid-cross-vrf.json",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/examples/invalid-overlap.json",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/examples/invalid-reference.json",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/examples/isolated-epgs.json",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/examples/tcp-and-udp.json",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/examples/three-tier.json",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/pyproject.toml",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/scripts/check_examples.py",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/src/aci_blueprint/__init__.py",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/src/aci_blueprint/cli.py",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/src/aci_blueprint/compiler.py",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/src/aci_blueprint/model.py",
+    "matches_commit": true
+  },
+  {
+    "path": "sources/src/aci_blueprint/validation.py",
+    "matches_commit": true
+  }
+]
